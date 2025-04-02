@@ -1,0 +1,66 @@
+.footer {
+  background-color: #FFFFFF;
+  min-height: 150px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 29px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .logo {
+    font-size: 25px;
+    font-weight: 700;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .link {
+      font-size: 17px;
+
+      &:hover {
+        text-decoration: underline black;
+      }
+    }
+
+    .languageWrapper {
+      display: flex;
+      gap: 17px;
+      align-items: center;
+
+      .language {
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .active {
+        color: #FFA542;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .iconLinks {
+    display: flex;
+    gap: 18px;
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

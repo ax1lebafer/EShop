@@ -1,11 +1,13 @@
 import './App.css';
-import { Header } from './components/Header/Header.tsx';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { ROUTES } from './routes.ts';
 
 function App() {
   return (
-    <>
-      <Header />
-    </>
+    <Routes>
+      <Route path={ROUTES.main} element={<Layout />}></Route>
+    </Routes>
   );
 }
 
