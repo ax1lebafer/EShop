@@ -2,6 +2,7 @@ import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../routes.ts';
 import cn from 'classnames';
+import { SOCIAL_NETWORK_ITEMS } from './constants.ts';
 
 export const Footer = () => {
   return (
@@ -34,23 +35,11 @@ export const Footer = () => {
       </nav>
 
       <nav className={styles.iconLinks}>
-        <Link to="https://vk.com/" target="_blank">
-          <img className={styles.icon} src="/icons/vk.svg" alt="VK icon" />
-        </Link>
-        <Link to="https://web.telegram.org/" target="_blank">
-          <img
-            className={styles.icon}
-            src="/icons/tg.svg"
-            alt="Telegram icon"
-          />
-        </Link>
-        <Link to="https://www.whatsapp.com/" target="_blank">
-          <img
-            className={styles.icon}
-            src="/icons/whatsapp.svg"
-            alt="Whatsapp icon"
-          />
-        </Link>
+        {SOCIAL_NETWORK_ITEMS.map((item) => (
+          <Link to={item.link} target="_blank">
+            <img className={styles.icon} src={item.icon} alt={item.alt} />
+          </Link>
+        ))}
       </nav>
     </footer>
   );
