@@ -9,8 +9,16 @@ export const Header = () => {
         QPICK
       </Link>
       <div className={styles.iconsContainer}>
-        <img className={styles.icon} src="/icons/heart.svg" alt="Heart icon" />
-        <img className={styles.icon} src="/icons/cart.svg" alt="Cart icon" />
+        <Link to={ROUTES.main}>
+          <img
+            className={styles.icon}
+            src="/icons/heart.svg"
+            alt="Heart icon"
+          />
+        </Link>
+        <Link to={ROUTES.cart}>
+          <img className={styles.icon} src="/icons/cart.svg" alt="Cart icon" />
+        </Link>
       </div>
     </header>
   );

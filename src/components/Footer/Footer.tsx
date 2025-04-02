@@ -15,7 +15,7 @@ export const Footer = () => {
         <Link to={ROUTES.main} className={styles.link}>
           Избранное
         </Link>
-        <Link to={ROUTES.main} className={styles.link}>
+        <Link to={ROUTES.cart} className={styles.link}>
           Корзина
         </Link>
         <Link to={ROUTES.main} className={styles.link}>
