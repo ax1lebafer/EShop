@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '../../routes.ts';
 import cn from 'classnames';
 import { SOCIAL_NETWORK_ITEMS } from './constants.ts';
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng);
+  };
+
   return (
     <footer className={styles.footer}>
       <Link className={styles.logo} to={ROUTES.main}>
@@ -13,24 +20,38 @@ export const Footer = () => {
 
       <nav className={styles.nav}>
         <Link to={ROUTES.main} className={styles.link}>
-          Избранное
+          {t('favorite')}
         </Link>
         <Link to={ROUTES.cart} className={styles.link}>
-          Корзина
+          {t('cart')}
         </Link>
         <Link to={ROUTES.main} className={styles.link}>
-          Контакты
+          {t('contacts')}
         </Link>
       </nav>
 
       <nav className={styles.nav} style={{ gap: '36px' }}>
         <Link to={ROUTES.main} className={styles.link}>
-          Условия сервиса
+          {t('termsOfService')}
         </Link>
         <div className={styles.languageWrapper}>
           <img src="/icons/earth.svg" alt="Earth icon" />
-          <p className={cn(styles.language, styles.active)}>Рус</p>
-          <p className={styles.language}>Eng</p>
+          <p
+            className={cn(styles.language, {
+              [styles.active]: i18n.language === 'ru',
+            })}
+            onClick={() => changeLanguage('ru')}
+          >
+            Рус
+          </p>
+          <p
+            className={cn(styles.language, {
+              [styles.active]: i18n.language === 'en',
+            })}
+            onClick={() => changeLanguage('en')}
+          >
+            Eng
+          </p>
         </div>
       </nav>
 
