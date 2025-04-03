@@ -7,5 +7,6 @@
   "buy": "Купить",
   "wirelessHeadphones": "Беспроводные наушники",
   "total": "Итого",
-  "proceedToCheckout": "Перейти к оформлению"
+  "proceedToCheckout": "Перейти к оформлению",
+  "noProductsInTheCart": "Товаров в корзине нет"
 }

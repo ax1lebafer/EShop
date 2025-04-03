@@ -7,5 +7,6 @@
   "buy": "Buy",
   "wirelessHeadphones": "Wireless headphones",
   "total": "Total",
-  "proceedToCheckout": "Proceed to checkout"
+  "proceedToCheckout": "Proceed to checkout",
+  "noProductsInTheCart": "There are no products in the cart"
 }

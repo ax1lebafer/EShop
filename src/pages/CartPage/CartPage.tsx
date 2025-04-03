@@ -1,15 +1,25 @@
 import { useTranslation } from 'react-i18next';
 import styles from './CartPage.module.scss';
 import { ItemCardBasket } from '../../components/ItemCardBasket/ItemCardBasket.tsx';
-
-import airpods from '../../assets/airpods_1.png';
-
-const ITEMS = [
-  { id: 1, title: 'Apple AirPods', img: airpods, price: 2929, count: 1 },
-];
+import { useAppSelector } from '../../store/stote.ts';
+import { useEffect, useState } from 'react';
 
 export const CartPage = () => {
   const { t } = useTranslation();
+
+  const { cartItems } = useAppSelector((state) => state.cart);
+
+  const [totalPrice, setTotalPrice] = useState<number>(0);
+
+  useEffect(() => {
+    const totalPrice = cartItems.reduce((acc, product) => {
+      acc += product.price * product.count;
+
+      return acc;
+    }, 0);
+
+    setTotalPrice(totalPrice);
+  }, [cartItems]);
 
   return (
     <>
@@ -17,15 +27,19 @@ export const CartPage = () => {
 
       <div className={styles.cart}>
         <div className={styles.cartItems}>
-          {ITEMS.map((_, index) => (
-            <ItemCardBasket key={index} />
-          ))}
+          {cartItems.length > 0 ? (
+            cartItems.map((item, index) => (
+              <ItemCardBasket key={index} item={item} />
+            ))
+          ) : (
+            <p>{t('noProductsInTheCart')}</p>
+          )}
         </div>
 
         <div className={styles.cartSummary}>
           <div className={styles.summaryTop}>
             <p>{t('total')}</p>
-            <p>₽ 0</p>
+            <p>₽ {totalPrice}</p>
           </div>
           <button className={styles.proceedBtn}>
             {t('proceedToCheckout')}
