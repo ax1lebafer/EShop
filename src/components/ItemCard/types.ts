@@ -1,5 +1,5 @@
-import { IHeadphones } from '../../types.ts';
+import { IProduct } from '../../types.ts';
 
 export interface IItemCardProps {
-  item: IHeadphones;
+  item: IProduct;
 }

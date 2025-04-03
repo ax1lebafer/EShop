@@ -1,6 +1,6 @@
 .card {
-  min-height: 407px;
-  max-width: 350px;
+  height: 407px;
+  width: 350px;
   background-color: #FFFFFF;
   border-radius: 30px;
   padding: 22px;
@@ -12,9 +12,73 @@
 
   .imgWrapper {
     width: 219px;
+    flex: 1;
 
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .title {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .priceWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .price {
+      font-size: 17px;
+      font-weight: 600;
+      color: #FFA542;
+    }
+
+    .oldPrice {
+      color: #FFCE7F;
+      font-size: 13px;
+      text-decoration: line-through;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .rateWrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rate {
+      color: #838383;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .buy {
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
