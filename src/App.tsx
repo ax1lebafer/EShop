@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { Layout } from './components/Layout';
+import { Layout } from './components/Layout/Layout.tsx';
 import { ROUTES } from './routes.ts';
 import { MainPage } from './pages/MainPage/MainPage.tsx';
 import { CartPage } from './pages/CartPage/CartPage.tsx';
