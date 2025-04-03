@@ -1,20 +1,17 @@
-import { useTranslation } from 'react-i18next';
-import { HEADPHONES } from '../../data.ts';
-import { ItemCard } from '../../components/ItemCard/ItemCard.tsx';
+import { HEADPHONES, WIRELESS_HEADPHONES } from '../../data.ts';
+import { ProductSection } from '../../components/ProductSection/ProductSection.tsx';
 import styles from './MainPage.module.scss';
 
 export const MainPage = () => {
-  const { t } = useTranslation();
-
   return (
     <>
-      <h3 className={styles.title}>{t('headphones')}</h3>
+      <ProductSection title="headphones" data={HEADPHONES} />
 
-      <section className={styles.section}>
-        {HEADPHONES.map((item) => (
-          <ItemCard key={item.id} item={item} />
-        ))}
-      </section>
+      <ProductSection
+        title="wirelessHeadphones"
+        data={WIRELESS_HEADPHONES}
+        className={styles.section}
+      />
     </>
   );
 };
