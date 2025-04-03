@@ -53,21 +53,21 @@ export const HEADPHONES: IProduct[] = [
 
 export const WIRELESS_HEADPHONES: IProduct[] = [
   {
-    id: 1,
+    id: 7,
     img: airpods1,
     title: 'Apple AirPods',
     price: 9527,
     rate: 4.7,
   },
   {
-    id: 2,
+    id: 8,
     img: airpods2,
     title: 'GERLAX GH-04',
     price: 6527,
     rate: 4.7,
   },
   {
-    id: 3,
+    id: 9,
     img: borofone,
     title: 'BOROFONE BO4',
     price: 7527,

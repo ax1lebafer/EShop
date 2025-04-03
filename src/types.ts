@@ -6,3 +6,11 @@ export interface IProduct {
   rate: number;
   old_price?: number;
 }
+
+export interface ICartProduct {
+  id: number;
+  img: string;
+  title: string;
+  price: number;
+  count: number;
+}
