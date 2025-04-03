@@ -1,0 +1,20 @@
+.cartItem {
+  background-color: white;
+  padding: 20px;
+  border-radius: 30px;
+
+  position: relative;
+
+  .deleteBtn {
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    background-color: transparent;
+    padding: 0;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

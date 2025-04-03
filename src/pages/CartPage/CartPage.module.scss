@@ -7,17 +7,18 @@
 
 .cart {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
+  grid-template-columns: 1fr 350px;
+  gap: 127px;
 
   .cartItems {
-    grid-column: 1/7;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .cartSummary {
-    grid-column: 9/13;
+    width: 350px;
+    align-self: start;
 
     background-color: #FFFFFF;
     border-radius: 30px;
