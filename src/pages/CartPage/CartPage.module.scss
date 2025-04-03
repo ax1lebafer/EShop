@@ -1,0 +1,53 @@
+.title {
+  margin-bottom: 20px;
+  color: #838383;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+
+  .cartItems {
+    grid-column: 1/7;
+  }
+
+  .cartSummary {
+    grid-column: 9/13;
+
+    background-color: #FFFFFF;
+    border-radius: 30px;
+
+    .summaryTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 22px;
+
+      p {
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    .proceedBtn {
+      background-color: black;
+      color: #FFFFFF;
+      padding: 22px;
+      border-radius: 20px;
+      width: 100%;
+      font-size: 17px;
+      font-weight: 600;
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
