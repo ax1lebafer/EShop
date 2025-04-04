@@ -19,7 +19,7 @@ export const Footer = () => {
       </Link>
 
       <nav className={styles.nav}>
-        <Link to={ROUTES.main} className={styles.link}>
+        <Link to={ROUTES.favorite} className={styles.link}>
           {t('favorite')}
         </Link>
         <Link to={ROUTES.cart} className={styles.link}>

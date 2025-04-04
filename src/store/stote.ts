@@ -6,11 +6,13 @@ import {
   useStore,
 } from 'react-redux';
 import { cartReducer } from './reducers/Cart/Cart.tsx';
+import { favoriteReducer } from './reducers/Favorite/Favorite.tsx';
 
 export const makeStore = () => {
   return configureStore({
     reducer: combineReducers({
       cart: cartReducer,
+      favorite: favoriteReducer,
     }),
   });
 };

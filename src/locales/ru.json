@@ -8,5 +8,6 @@
   "wirelessHeadphones": "Беспроводные наушники",
   "total": "Итого",
   "proceedToCheckout": "Перейти к оформлению",
-  "noProductsInTheCart": "Товаров в корзине нет"
+  "noProductsInTheCart": "Товаров в корзине нет",
+  "noFavoriteProducts": "Избранных товаров нет"
 }

@@ -25,7 +25,7 @@ export const Header = () => {
         QPICK
       </Link>
       <div className={styles.iconsContainer}>
-        <Link to={ROUTES.main}>
+        <Link to={ROUTES.favorite}>
           <img
             className={styles.icon}
             src="/icons/heart.svg"
