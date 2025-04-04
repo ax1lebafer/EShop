@@ -34,7 +34,7 @@ export const Header = () => {
         </Link>
         <Link to={ROUTES.cart} className={styles.cartLink}>
           <img className={styles.icon} src="/icons/cart.svg" alt="Cart icon" />
-          {cartItems.length > 0 && <p className={styles.count}>{count}</p>}
+          {count > 0 && <p className={styles.count}>{count}</p>}
         </Link>
       </div>
     </header>
