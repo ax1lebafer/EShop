@@ -3,6 +3,7 @@ import styles from './CartPage.module.scss';
 import { ItemCardBasket } from '../../components/ItemCardBasket/ItemCardBasket.tsx';
 import { useAppSelector } from '../../store/stote.ts';
 import { useEffect, useState } from 'react';
+import { Modal } from '../../components/ui/Modal/Modal.tsx';
 
 export const CartPage = () => {
   const { t } = useTranslation();
@@ -10,6 +11,15 @@ export const CartPage = () => {
   const { cartItems } = useAppSelector((state) => state.cart);
 
   const [totalPrice, setTotalPrice] = useState<number>(0);
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
 
   useEffect(() => {
     const totalPrice = cartItems.reduce((acc, product) => {
@@ -41,11 +51,15 @@ export const CartPage = () => {
             <p>{t('total')}</p>
             <p>₽ {totalPrice}</p>
           </div>
-          <button className={styles.proceedBtn}>
+          <button className={styles.proceedBtn} onClick={handleOpenModal}>
             {t('proceedToCheckout')}
           </button>
         </div>
       </div>
+
+      <Modal isOpen={openModal} onClose={handleCloseModal}>
+        123
+      </Modal>
     </>
   );
 };
