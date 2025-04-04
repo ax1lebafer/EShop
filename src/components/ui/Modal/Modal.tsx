@@ -18,7 +18,7 @@ export const Modal: FC<IModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         <button className={styles.closeButton} onClick={onClose}>
-          &times;
+          <img src="/icons/close.svg" alt="Close icon" />
         </button>
         {children}
       </div>

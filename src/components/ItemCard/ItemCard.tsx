@@ -12,9 +12,12 @@ import {
   addToFavorite,
   removeFromFavorite,
 } from '../../store/reducers/Favorite/Favorite.tsx';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const ItemCard: FC<IItemCardProps> = ({ item }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const dispatch = useAppDispatch();
 
@@ -42,8 +45,12 @@ export const ItemCard: FC<IItemCardProps> = ({ item }) => {
     dispatch(removeFromFavorite(item.id));
   };
 
+  const handleOpenDetailPage = () => {
+    navigate(`/item/${item.id}`, { state: { backgroundLocation: location } });
+  };
+
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={handleOpenDetailPage}>
       <img
         className={cn(styles.favoriteIcon, styles.active)}
         src={favoriteItem ? '/icons/heart_fill.svg' : 'icons/heart.svg'}
