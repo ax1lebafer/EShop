@@ -8,6 +8,10 @@ import {
   addToCart,
   decrementProduct,
 } from '../../store/reducers/Cart/Cart.tsx';
+import {
+  addToFavorite,
+  removeFromFavorite,
+} from '../../store/reducers/Favorite/Favorite.tsx';
 
 export const ItemCard: FC<IItemCardProps> = ({ item }) => {
   const { t } = useTranslation();
@@ -15,8 +19,10 @@ export const ItemCard: FC<IItemCardProps> = ({ item }) => {
   const dispatch = useAppDispatch();
 
   const { cartItems } = useAppSelector((state) => state.cart);
+  const { favoriteItems } = useAppSelector((state) => state.favorite);
 
   const cartItem = cartItems.find((product) => product.id === item.id);
+  const favoriteItem = favoriteItems.find((product) => product.id === item.id);
 
   const handleAddToCart = () => {
     const { old_price, rate, ...rest } = item;
@@ -28,8 +34,22 @@ export const ItemCard: FC<IItemCardProps> = ({ item }) => {
     dispatch(decrementProduct(item.id));
   };
 
+  const handleAddToFavorite = () => {
+    dispatch(addToFavorite(item));
+  };
+
+  const handleRemoveFromFavorite = () => {
+    dispatch(removeFromFavorite(item.id));
+  };
+
   return (
     <div className={styles.card}>
+      <img
+        className={cn(styles.favoriteIcon, styles.active)}
+        src={favoriteItem ? '/icons/heart_fill.svg' : 'icons/heart.svg'}
+        alt="Favorite icon"
+        onClick={favoriteItem ? handleRemoveFromFavorite : handleAddToFavorite}
+      />
       <div className={styles.imgWrapper}>
         <img src={item.img} alt={item.title} />
       </div>

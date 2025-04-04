@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 export const Header = () => {
   const { cartItems } = useAppSelector((state) => state.cart);
+  const { favoriteItems } = useAppSelector((state) => state.favorite);
 
   const [count, setCount] = useState<number>(0);
 
@@ -25,12 +26,15 @@ export const Header = () => {
         QPICK
       </Link>
       <div className={styles.iconsContainer}>
-        <Link to={ROUTES.favorite}>
+        <Link to={ROUTES.favorite} className={styles.cartLink}>
           <img
             className={styles.icon}
             src="/icons/heart.svg"
             alt="Heart icon"
           />
+          {favoriteItems.length > 0 && (
+            <p className={styles.count}>{favoriteItems.length}</p>
+          )}
         </Link>
         <Link to={ROUTES.cart} className={styles.cartLink}>
           <img className={styles.icon} src="/icons/cart.svg" alt="Cart icon" />

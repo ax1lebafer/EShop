@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import styles from './FavoritePage.module.scss';
 import { useAppSelector } from '../../store/stote.ts';
+import { ItemCard } from '../../components/ItemCard/ItemCard.tsx';
 
 export const FavoritePage = () => {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export const FavoritePage = () => {
 
       <section className={styles.favorite}>
         {favoriteItems.length > 0 ? (
-          <p>123</p>
+          favoriteItems.map((item) => <ItemCard item={item} />)
         ) : (
           <p>{t('noFavoriteProducts')}</p>
         )}

@@ -5,10 +5,23 @@
   border-radius: 30px;
   padding: 22px;
   gap: 54px;
+  position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .favoriteIcon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 
   .imgWrapper {
     width: 219px;
