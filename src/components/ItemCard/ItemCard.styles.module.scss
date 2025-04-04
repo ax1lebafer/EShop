@@ -70,6 +70,32 @@
       font-weight: 600;
     }
 
+    .countWrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .icon {
+        width: 23px;
+        height: 23px;
+        cursor: pointer;
+        transition: transform .3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .count {
+        font-size: 17px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+      }
+    }
+
     .buy {
       font-size: 17px;
       font-weight: 600;

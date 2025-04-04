@@ -3,18 +3,29 @@ import { IItemCardProps } from './types.ts';
 import styles from './ItemCard.styles.module.scss';
 import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch } from '../../store/stote.ts';
-import { addToCart } from '../../store/reducers/Cart/Cart.tsx';
+import { useAppDispatch, useAppSelector } from '../../store/stote.ts';
+import {
+  addToCart,
+  decrementProduct,
+} from '../../store/reducers/Cart/Cart.tsx';
 
 export const ItemCard: FC<IItemCardProps> = ({ item }) => {
   const { t } = useTranslation();
 
   const dispatch = useAppDispatch();
 
+  const { cartItems } = useAppSelector((state) => state.cart);
+
+  const cartItem = cartItems.find((product) => product.id === item.id);
+
   const handleAddToCart = () => {
     const { old_price, rate, ...rest } = item;
 
     dispatch(addToCart({ ...rest, count: 1 }));
+  };
+
+  const handleMinusProduct = () => {
+    dispatch(decrementProduct(item.id));
   };
 
   return (
@@ -39,9 +50,27 @@ export const ItemCard: FC<IItemCardProps> = ({ item }) => {
             <img src="/icons/star.svg" alt="Star icon" />
             <p className={styles.rate}>{item.rate}</p>
           </div>
-          <p className={styles.buy} onClick={handleAddToCart}>
-            {t('buy')}
-          </p>
+          {cartItem ? (
+            <div className={styles.countWrapper}>
+              <img
+                className={styles.icon}
+                src="/icons/minus.svg"
+                alt="Minus icon"
+                onClick={handleMinusProduct}
+              />
+              <p className={styles.count}>{cartItem.count}</p>
+              <img
+                className={styles.icon}
+                src="/icons/plus.svg"
+                alt="Plus icon"
+                onClick={handleAddToCart}
+              />
+            </div>
+          ) : (
+            <p className={styles.buy} onClick={handleAddToCart}>
+              {t('buy')}
+            </p>
+          )}
         </div>
       </div>
     </div>
