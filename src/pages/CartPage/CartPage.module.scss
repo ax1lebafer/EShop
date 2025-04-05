@@ -51,6 +51,11 @@
       &:hover {
         transform: scale(1.05);
       }
+
+      &:disabled {
+        background-color: #838383;
+        cursor: not-allowed;
+      }
     }
   }
 }

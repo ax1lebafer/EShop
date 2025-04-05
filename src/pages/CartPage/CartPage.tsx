@@ -51,7 +51,11 @@ export const CartPage = () => {
             <p>{t('total')}</p>
             <p>₽ {totalPrice}</p>
           </div>
-          <button className={styles.proceedBtn} onClick={handleOpenModal}>
+          <button
+            className={styles.proceedBtn}
+            onClick={handleOpenModal}
+            disabled={!cartItems.length}
+          >
             {t('proceedToCheckout')}
           </button>
         </div>
