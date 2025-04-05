@@ -4,6 +4,7 @@ export interface IProduct {
   title: string;
   price: number;
   rate: number;
+  description: string;
   old_price?: number;
 }
 
@@ -13,4 +14,5 @@ export interface ICartProduct {
   title: string;
   price: number;
   count: number;
+  description?: string;
 }

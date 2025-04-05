@@ -9,5 +9,7 @@
   "total": "Итого",
   "proceedToCheckout": "Перейти к оформлению",
   "noProductsInTheCart": "Товаров в корзине нет",
-  "noFavoriteProducts": "Избранных товаров нет"
+  "noFavoriteProducts": "Избранных товаров нет",
+  "description": "Описание",
+  "noDescription": "Нет описания"
 }
