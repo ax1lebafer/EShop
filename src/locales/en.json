@@ -2,7 +2,7 @@
   "cart": "Cart",
   "favorite": "Favorite",
   "contacts": "Contacts",
-  "termsOfService": "Terms of service",
+  "termsService": "Terms of service",
   "headphones": "Headphones",
   "buy": "Buy",
   "wirelessHeadphones": "Wireless headphones",
@@ -13,5 +13,64 @@
   "description": "Description",
   "noDescription": "No description",
   "notFoundPage": "This page does not exist",
-  "backToHome": "Back to home"
+  "backToHome": "Back to home",
+  "termsOfService": [
+    {
+      "title": "General Provisions",
+      "info": [
+        "QPICK Online Store (hereinafter the \"Store\") provides electronic sales services. By using our website, you agree to these Terms of Service. We reserve the right to modify these terms by publishing an updated version on the website."
+      ]
+    },
+    {
+      "title": "Ordering and Payment",
+      "info": [
+        "Orders are accepted through the website or by phone.",
+        "After placing an order, you will receive a confirmation on the provided email or phone number.",
+        "Payment can be made online using bank cards, electronic wallets, or at the cash register upon product receipt, if such an option is available."
+      ]
+    },
+    {
+      "title": "Delivery",
+      "info": [
+        "We deliver products throughout Russia.",
+        "Delivery time depends on your region and the chosen method of delivery, generally ranging from 2 to 7 business days.",
+        "The delivery cost is calculated individually at the time of order placement."
+      ]
+    },
+    {
+      "title": "Returns and Exchanges",
+      "info": [
+        "You may return or exchange a product within 14 days from receipt, provided that it has not been used and retains its original condition.",
+        "Refunds are processed after inspection of the product and in accordance with the applicable laws of the Russian Federation."
+      ]
+    },
+    {
+      "title": "Warranty Service",
+      "info": [
+        "A manufacturer’s warranty is provided for all products.",
+        "In case of a manufacturing defect, you may contact an authorized service center or exercise your right to exchange the product."
+      ]
+    },
+    {
+      "title": "Personal Data Protection",
+      "info": [
+        "We collect and process your personal data in strict accordance with our privacy policy.",
+        "Your data is not shared with third parties without your consent, except as required by law."
+      ]
+    },
+    {
+      "title": "Liability",
+      "info": [
+        "The Store is not responsible for delivery delays caused by force majeure or the actions of transport companies.",
+        "We do not guarantee absolute accuracy of the information presented on the website, but we strive to keep it as up-to-date as possible."
+      ]
+    },
+    {
+      "title": "Other Terms",
+      "info": [
+        "If any issues or disputes arise, you may contact the Store’s support service.",
+        "Using the website signifies your agreement to all the terms of this agreement."
+      ]
+    }
+  ]
 }

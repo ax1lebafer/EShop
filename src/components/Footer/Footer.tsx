@@ -31,8 +31,8 @@ export const Footer = () => {
       </nav>
 
       <nav className={styles.nav} style={{ gap: '36px' }}>
-        <Link to={ROUTES.main} className={styles.link}>
-          {t('termsOfService')}
+        <Link to={ROUTES.termsOfService} className={styles.link}>
+          {t('termsService')}
         </Link>
         <div className={styles.languageWrapper}>
           <img src="/icons/earth.svg" alt="Earth icon" />

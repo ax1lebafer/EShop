@@ -8,6 +8,7 @@ import { FavoritePage } from './pages/FavoritePage/FavoritePage.tsx';
 import { DetailProductPage } from './pages/DetailProductPage/DetailProductPage.tsx';
 import { ProductDetail } from './components/ProductDetail/ProductDetail.tsx';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage.tsx';
+import { TermsOfServicePage } from './pages/TermsOfServicePage/TermsOfServicePage.tsx';
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,11 @@ function App() {
           <Route path={ROUTES.cart} element={<CartPage />} />
           <Route path={ROUTES.favorite} element={<FavoritePage />} />
           <Route path="item/:id" element={<ProductDetail />} />
+          <Route
+            path={ROUTES.termsOfService}
+            element={<TermsOfServicePage />}
+          />
+
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
