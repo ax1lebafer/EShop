@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 300px;
+
+  .button {
+    background-color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

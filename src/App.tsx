@@ -7,6 +7,7 @@ import { CartPage } from './pages/CartPage/CartPage.tsx';
 import { FavoritePage } from './pages/FavoritePage/FavoritePage.tsx';
 import { DetailProductPage } from './pages/DetailProductPage/DetailProductPage.tsx';
 import { ProductDetail } from './components/ProductDetail/ProductDetail.tsx';
+import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage.tsx';
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
           <Route path={ROUTES.cart} element={<CartPage />} />
           <Route path={ROUTES.favorite} element={<FavoritePage />} />
           <Route path="item/:id" element={<ProductDetail />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
 

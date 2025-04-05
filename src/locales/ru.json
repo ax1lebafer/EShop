@@ -11,5 +11,7 @@
   "noProductsInTheCart": "Товаров в корзине нет",
   "noFavoriteProducts": "Избранных товаров нет",
   "description": "Описание",
-  "noDescription": "Нет описания"
+  "noDescription": "Нет описания",
+  "notFoundPage": "Такой страницы не существует",
+  "backToHome": "Вернуться на главную"
 }

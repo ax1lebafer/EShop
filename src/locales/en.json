@@ -11,5 +11,7 @@
   "noProductsInTheCart": "There are no products in the cart",
   "noFavoriteProducts": "No favorite products",
   "description": "Description",
-  "noDescription": "No description"
+  "noDescription": "No description",
+  "notFoundPage": "This page does not exist",
+  "backToHome": "Back to home"
 }
