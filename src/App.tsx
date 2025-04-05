@@ -6,6 +6,7 @@ import { MainPage } from './pages/MainPage/MainPage.tsx';
 import { CartPage } from './pages/CartPage/CartPage.tsx';
 import { FavoritePage } from './pages/FavoritePage/FavoritePage.tsx';
 import { DetailProductPage } from './pages/DetailProductPage/DetailProductPage.tsx';
+import { ProductDetail } from './components/ProductDetail/ProductDetail.tsx';
 
 function App() {
   const location = useLocation();
@@ -19,7 +20,7 @@ function App() {
           <Route index element={<MainPage />} />
           <Route path={ROUTES.cart} element={<CartPage />} />
           <Route path={ROUTES.favorite} element={<FavoritePage />} />
-          <Route path="item/:id" element={<DetailProductPage />} />
+          <Route path="item/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
 

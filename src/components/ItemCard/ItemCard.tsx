@@ -55,7 +55,14 @@ export const ItemCard: FC<IItemCardProps> = ({ item }) => {
         className={cn(styles.favoriteIcon, styles.active)}
         src={favoriteItem ? '/icons/heart_fill.svg' : 'icons/heart.svg'}
         alt="Favorite icon"
-        onClick={favoriteItem ? handleRemoveFromFavorite : handleAddToFavorite}
+        onClick={(event) => {
+          event.stopPropagation();
+          if (favoriteItem) {
+            handleRemoveFromFavorite();
+          } else {
+            handleAddToFavorite();
+          }
+        }}
       />
       <div className={styles.imgWrapper}>
         <img src={item.img} alt={item.title} />
@@ -83,18 +90,30 @@ export const ItemCard: FC<IItemCardProps> = ({ item }) => {
                 className={styles.icon}
                 src="/icons/minus.svg"
                 alt="Minus icon"
-                onClick={handleMinusProduct}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleMinusProduct();
+                }}
               />
               <p className={styles.count}>{cartItem.count}</p>
               <img
                 className={styles.icon}
                 src="/icons/plus.svg"
                 alt="Plus icon"
-                onClick={handleAddToCart}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleAddToCart();
+                }}
               />
             </div>
           ) : (
-            <p className={styles.buy} onClick={handleAddToCart}>
+            <p
+              className={styles.buy}
+              onClick={(event) => {
+                event.stopPropagation();
+                handleAddToCart();
+              }}
+            >
               {t('buy')}
             </p>
           )}

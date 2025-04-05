@@ -74,3 +74,13 @@ export const WIRELESS_HEADPHONES: IProduct[] = [
     rate: 4.7,
   },
 ];
+
+export const PRODUCTS = {
+  headphones: HEADPHONES,
+  wirelessHeadphones: WIRELESS_HEADPHONES,
+};
+
+export const getProductById = (id: number): IProduct | undefined => {
+  const allProducts: IProduct[] = Object.values(PRODUCTS).flat();
+  return allProducts.find((product) => product.id === id);
+};
