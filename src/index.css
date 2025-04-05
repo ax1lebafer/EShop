@@ -9,6 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
