@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Modal } from '../../components/ui/Modal/Modal.tsx';
 import { ProductDetail } from '../../components/ProductDetail/ProductDetail.tsx';
+import styles from './DetailProductPage.module.scss';
 
 export const DetailProductPage = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export const DetailProductPage = () => {
   };
 
   return (
-    <Modal isOpen={true} onClose={handleClose}>
+    <Modal isOpen={true} onClose={handleClose} className={styles.modal}>
       <ProductDetail />
     </Modal>
   );
