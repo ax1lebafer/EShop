@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { getProductById } from '../../data.ts';
 import { useTranslation } from 'react-i18next';
 import styles from './ProductDetail.module.scss';
+import { ItemCardBottom } from '../ItemCardBottom/ItemCardBottom.tsx';
 
 export const ProductDetail = () => {
   const { t } = useTranslation();
@@ -25,12 +26,7 @@ export const ProductDetail = () => {
           <p className={styles.descriptionTitle}>{t('description')}:</p>
           <p>{product.description || t('noDescription')}</p>
         </div>
-        <div>
-          <div className={styles.rateWrapper}>
-            <img src="/icons/star.svg" alt="Star icon" />
-            <p className={styles.rate}>{product.rate}</p>
-          </div>
-        </div>
+        <ItemCardBottom item={product} />
       </div>
     </div>
   );

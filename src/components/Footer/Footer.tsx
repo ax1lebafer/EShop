@@ -57,7 +57,7 @@ export const Footer = () => {
 
       <nav className={styles.iconLinks}>
         {SOCIAL_NETWORK_ITEMS.map((item) => (
-          <Link to={item.link} target="_blank">
+          <Link key={item.id} to={item.link} target="_blank">
             <img className={styles.icon} src={item.icon} alt={item.alt} />
           </Link>
         ))}
