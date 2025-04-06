@@ -25,7 +25,7 @@ export const Footer = () => {
         <Link to={ROUTES.cart} className={styles.link}>
           {t('cart')}
         </Link>
-        <Link to={ROUTES.main} className={styles.link}>
+        <Link to={ROUTES.contacts} className={styles.link}>
           {t('contacts')}
         </Link>
       </nav>

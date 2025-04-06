@@ -3,4 +3,5 @@ export const ROUTES = {
   cart: '/cart',
   favorite: '/favorite',
   termsOfService: '/terms-of-service',
+  contacts: '/contacts',
 };

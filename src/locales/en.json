@@ -72,5 +72,14 @@
         "Using the website signifies your agreement to all the terms of this agreement."
       ]
     }
-  ]
+  ],
+  "phone": "Phone",
+  "address": "Address",
+  "openingHours": "Opening hours",
+  "monday": "Monday",
+  "friday": "Friday",
+  "saturday": "Saturday",
+  "sunday": "Sunday",
+  "dayOff": "Day off",
+  "realAddress": "123456, Moscow, Polimernaya st., 10, office 15"
 }

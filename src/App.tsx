@@ -9,6 +9,7 @@ import { DetailProductPage } from './pages/DetailProductPage/DetailProductPage.t
 import { ProductDetail } from './components/ProductDetail/ProductDetail.tsx';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage.tsx';
 import { TermsOfServicePage } from './pages/TermsOfServicePage/TermsOfServicePage.tsx';
+import { ContactsPage } from './pages/ContactsPage/ContactsPage.tsx';
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function App() {
             path={ROUTES.termsOfService}
             element={<TermsOfServicePage />}
           />
+          <Route path={ROUTES.contacts} element={<ContactsPage />} />
 
           <Route path="*" element={<NotFoundPage />} />
         </Route>
