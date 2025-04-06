@@ -1,0 +1,84 @@
+.paymentForm {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .field {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+
+  .radioGroup {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    label {
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .fieldGroup {
+    display: flex;
+    gap: 15px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .prevButton,
+    .nextButton {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .prevButton {
+      background-color: #ccc;
+      color: #333;
+    }
+    .nextButton {
+      background-color: black;
+      color: #fff;
+    }
+    .prevButton:hover,
+    .nextButton:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .error {
+    display: block;
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}

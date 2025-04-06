@@ -3,7 +3,7 @@ import styles from './CartPage.module.scss';
 import { ItemCardBasket } from '../../components/ItemCardBasket/ItemCardBasket.tsx';
 import { useAppSelector } from '../../store/stote.ts';
 import { useEffect, useState } from 'react';
-import { Modal } from '../../components/ui/Modal/Modal.tsx';
+import { PaymentForm } from '../../components/PaymentForm/PaymentForm.tsx';
 
 export const CartPage = () => {
   const { t } = useTranslation();
@@ -61,9 +61,7 @@ export const CartPage = () => {
         </div>
       </div>
 
-      <Modal isOpen={openModal} onClose={handleCloseModal}>
-        123
-      </Modal>
+      <PaymentForm isOpen={openModal} onClose={handleCloseModal} />
     </>
   );
 };
