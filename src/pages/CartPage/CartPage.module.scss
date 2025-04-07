@@ -9,6 +9,11 @@
   display: grid;
   grid-template-columns: 1fr 350px;
   gap: 127px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
   .cartItems {
     display: flex;
@@ -24,6 +29,12 @@
 
     background-color: #FFFFFF;
     border-radius: 30px;
+    
+    @media (max-width: 768px) {
+      width: 100%;
+      position: relative;
+      top: 0;
+    }
 
     .summaryTop {
       display: flex;

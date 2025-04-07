@@ -20,6 +20,10 @@
   max-height: 90%;
   overflow: auto;
   min-width: 400px;
+
+  @media (max-width: 398px) {
+    min-width: 330px;
+  }
 }
 
 .closeButton {

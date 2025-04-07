@@ -1,4 +1,9 @@
 .modal {
   max-width: 800px;
   min-width: 600px;
+
+  @media (max-width: 810px) {
+    margin: 0 30px;
+    min-width: calc(100% - 60px);
+  }
 }
