@@ -108,5 +108,7 @@
   "paymentByCard": "Payment by card",
   "cardHolder": "Cardholder",
   "cardNumber": "Card number",
-  "validityPeriodMMYY": "Validity period (MM/YY)"
+  "validityPeriodMMYY": "Validity period (MM/YY)",
+  "nothingFound": "Nothing found",
+  "search": "Search"
 }

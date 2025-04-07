@@ -9,16 +9,19 @@ export const ProductSection: FC<IProductSectionProps> = ({
   title,
   data,
   className,
+  searchQuery,
 }) => {
   const { t } = useTranslation();
 
-  const filteredData = useProductsByType(data, title);
+  const filteredData = useProductsByType(data, title, searchQuery);
 
   return (
     <section className={className}>
       <h3 className={styles.title}>{t(`${title}`)}</h3>
 
       <div className={styles.section}>
+        {!filteredData.length && <p>{t('nothingFound')}</p>}
+
         {filteredData.map((item) => (
           <ItemCard key={item.id} item={item} />
         ))}

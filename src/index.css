@@ -29,3 +29,8 @@ button {
   outline: none;
   border: none;
 }
+
+input {
+  font-family: inherit;
+  outline: none;
+}

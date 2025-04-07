@@ -108,5 +108,7 @@
   "paymentByCard": "Оплата картой",
   "cardHolder": "Владелец карты",
   "cardNumber": "Номер карты",
-  "validityPeriodMMYY": "Срок действия (MM/YY)"
+  "validityPeriodMMYY": "Срок действия (MM/YY)",
+  "nothingFound": "Ничего не найдено",
+  "search": "Поиск"
 }
