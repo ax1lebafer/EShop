@@ -1,15 +1,15 @@
-import { HEADPHONES, WIRELESS_HEADPHONES } from '../../data.ts';
+import { PRODUCTS } from '../../data.ts';
 import { ProductSection } from '../../components/ProductSection/ProductSection.tsx';
 import styles from './MainPage.module.scss';
 
 export const MainPage = () => {
   return (
     <>
-      <ProductSection title="headphones" data={HEADPHONES} />
+      <ProductSection title="headphones" data={PRODUCTS} />
 
       <ProductSection
         title="wirelessHeadphones"
-        data={WIRELESS_HEADPHONES}
+        data={PRODUCTS}
         className={styles.section}
       />
     </>
